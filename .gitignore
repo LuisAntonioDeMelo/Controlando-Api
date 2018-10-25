@@ -1,0 +1,6 @@
+﻿# Created by https://www.gitignore.io
+# Java Api Rest
+### Java angular ###
+/.metadata
+/media
+/static 
