@@ -6,7 +6,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.alg.controlando.api.models.Pessoa;
-import com.alg.controlando.api.repositorio.PessoaRepositorio;
+import com.alg.controlando.api.repository.PessoaRepositorio;
 
 @Service
 public class PessoaService {

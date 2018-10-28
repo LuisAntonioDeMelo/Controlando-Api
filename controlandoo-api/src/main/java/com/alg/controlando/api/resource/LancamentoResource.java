@@ -1,5 +1,6 @@
 package com.alg.controlando.api.resource;
 
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +29,8 @@ import com.alg.controlando.api.event.RecursoCriadoEvent;
 import com.alg.controlando.api.exception.service.PessoaInexistenteOuInativaException;
 import com.alg.controlando.api.exceptionhandler.ControlandoException.Erro;
 import com.alg.controlando.api.models.Lancamento;
-import com.alg.controlando.api.repositorio.LancamentoRepository;
+import com.alg.controlando.api.repository.LancamentoRepository;
+import com.alg.controlando.api.repository.filter.LancamentoFilter;
 import com.alg.controlando.api.service.LancamentoService;
 
 @RestController
@@ -46,8 +50,8 @@ public class LancamentoResource {
 	private MessageSource mensagem;
 	
 	@GetMapping
-	public List<Lancamento> getLancamentos() {
-		return lancamentoRepository.findAll();
+	public Page<Lancamento> pesquisar(LancamentoFilter lancamentoFilter, Pageable pageable) {
+		return lancamentoRepository.filtrar(lancamentoFilter, pageable);
 	}
 
 	@GetMapping("/{idLancamento}")

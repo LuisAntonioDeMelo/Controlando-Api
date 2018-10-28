@@ -1,13 +1,12 @@
 package com.alg.controlando.api.service;
 
-import org.aspectj.weaver.patterns.IScope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.alg.controlando.api.exception.service.PessoaInexistenteOuInativaException;
 import com.alg.controlando.api.models.Lancamento;
 import com.alg.controlando.api.models.Pessoa;
-import com.alg.controlando.api.repositorio.LancamentoRepository;
+import com.alg.controlando.api.repository.LancamentoRepository;
 
 @Service
 public class LancamentoService {

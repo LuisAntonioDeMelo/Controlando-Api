@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.alg.controlando.api.event.RecursoCriadoEvent;
 import com.alg.controlando.api.models.Categoria;
-import com.alg.controlando.api.repositorio.ICategoria;
+import com.alg.controlando.api.repository.ICategoria;
 import com.alg.controlando.api.service.CategoriaService;
 
 

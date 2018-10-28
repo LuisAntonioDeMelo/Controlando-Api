@@ -1,4 +1,4 @@
-package com.alg.controlando.api.repositorio;
+package com.alg.controlando.api.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

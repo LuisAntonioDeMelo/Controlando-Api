@@ -6,7 +6,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.alg.controlando.api.models.Categoria;
-import com.alg.controlando.api.repositorio.ICategoria;
+import com.alg.controlando.api.repository.ICategoria;
 
 @Service
 public class CategoriaService {

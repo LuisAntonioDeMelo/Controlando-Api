@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.alg.controlando.api.event.RecursoCriadoEvent;
 import com.alg.controlando.api.models.Pessoa;
-import com.alg.controlando.api.repositorio.PessoaRepositorio;
+import com.alg.controlando.api.repository.PessoaRepositorio;
 import com.alg.controlando.api.service.PessoaService;
 
 @RestController
